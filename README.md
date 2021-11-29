@@ -1,5 +1,9 @@
 # minimal_stopwatch
 
+<h3>Screenshots</h3>
+<img src = "screenshots/pic1.png" width="200" height="380">
+<img src = "screenshots/pic2.png" width="200" height="380">
+
 A new Flutter project.
 
 ## Getting Started
