@@ -54,7 +54,7 @@ class TimeDigit extends StatelessWidget {
             Shadow(
               offset: Offset(10.0, 10.0),
               blurRadius: 20.0,
-              color: Colors.black45,
+              color: Colors.black54,
             ),
           ],
         ),

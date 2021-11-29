@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:minimal_stopwatch/widgets/clock_hand.dart';
 import 'package:minimal_stopwatch/widgets/elapsed_time_text.dart';
 import 'package:minimal_stopwatch/widgets/reset_button.dart';
 import 'package:minimal_stopwatch/widgets/size_helpers.dart';
@@ -96,6 +99,18 @@ class _StopwatchState extends State<Stopwatch>
                   onTap: _reset,
                   child: ResetButton(),
                 ),
+              ),
+              Positioned(
+                left: displayWidth(context) * 0.4933,
+                bottom: displayHeight(context) * 0.721,
+                child: Clockhand(
+                    rotationZAngle: pi +
+                        (2 * pi / 60000) *
+                            _elapsed
+                                .inMilliseconds, //60000 milliseconds are there in 1 second
+                    handThickness: 2.5,
+                    handLength: 70.0,
+                    color: Colors.white),
               ),
               Positioned(
                 left: displayWidth(context) * 0.59,
