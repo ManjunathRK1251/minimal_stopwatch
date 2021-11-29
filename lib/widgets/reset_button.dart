@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:minimal_stopwatch/widgets/size_helpers.dart';
 
 class ResetButton extends StatelessWidget {
   const ResetButton({
@@ -15,24 +16,24 @@ class ResetButton extends StatelessWidget {
           'RESET',
           style: GoogleFonts.rubik(
             fontWeight: FontWeight.bold,
-            fontSize: 20.0,
+            fontSize: displayWidth(context) * 0.0510,
             color: Color(0xff33365B),
           ),
         ),
       ),
-      width: 131,
-      height: 51,
+      width: displayWidth(context) * 0.334,
+      height: displayWidth(context) * 0.130,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          boxShadow: [
-              BoxShadow(
-      color: Color(0xff484477),
-      blurRadius: 50,
-      offset: Offset(20, 20),
-              ),
-          ],
-          color: Colors.white,
+        borderRadius: BorderRadius.circular(25),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0xff484477),
+            blurRadius: 50,
+            offset: Offset(20, 20),
+          ),
+        ],
+        color: Colors.white,
       ),
-              );
+    );
   }
 }
