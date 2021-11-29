@@ -5,7 +5,10 @@ import 'package:minimal_stopwatch/widgets/size_helpers.dart';
 class StartButton extends StatelessWidget {
   const StartButton({
     Key? key,
+    required this.isRunning,
   }) : super(key: key);
+
+  final bool isRunning;
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +18,16 @@ class StartButton extends StatelessWidget {
       child: Align(
         alignment: Alignment.center,
         child: Text(
-          'START',
+          isRunning ? 'STOP' : 'START',
           style: GoogleFonts.rubik(
             fontWeight: FontWeight.bold,
             fontSize: displayWidth(context) * 0.0510,
-            color: Color(0xff33365B),
+            color: isRunning ? Colors.white : Color(0xff33365B),
           ),
         ),
       ),
       decoration: BoxDecoration(
+        color: isRunning ? Colors.red : Color(0xfff1ff3c),
         borderRadius: BorderRadius.circular(25),
         boxShadow: [
           BoxShadow(
@@ -32,7 +36,6 @@ class StartButton extends StatelessWidget {
             offset: Offset(20, 20),
           ),
         ],
-        color: Color(0xfff1ff3c),
       ),
     );
   }
