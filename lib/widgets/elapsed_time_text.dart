@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:minimal_stopwatch/widgets/size_helpers.dart';
 
 class ElapsedTimeText extends StatelessWidget {
-  ElapsedTimeText({Key? key, required this.elapsed}) : super(key: key);
+  const ElapsedTimeText({Key? key, required this.elapsed}) : super(key: key);
 
   final Duration elapsed;
 
@@ -51,7 +51,7 @@ class TimeDigit extends StatelessWidget {
           fontSize: displayWidth(context) * 0.159,
           color: Colors.white,
           shadows: <Shadow>[
-            Shadow(
+            const Shadow(
               offset: Offset(10.0, 10.0),
               blurRadius: 20.0,
               color: Colors.black54,

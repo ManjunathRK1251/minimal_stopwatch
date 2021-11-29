@@ -24,7 +24,7 @@ class Clockhand extends StatelessWidget {
       child: Container(
         width: handThickness,
         height: handLength,
-        color: Color(0xffA59EBF),
+        color: const Color(0xffA59EBF),
       ),
     );
   }

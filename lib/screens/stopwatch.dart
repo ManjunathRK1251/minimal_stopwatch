@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:minimal_stopwatch/widgets/clock_hand.dart';
 import 'package:minimal_stopwatch/widgets/elapsed_time_text.dart';
 import 'package:minimal_stopwatch/widgets/reset_button.dart';
@@ -30,7 +29,7 @@ class _StopwatchState extends State<Stopwatch>
   @override
   void initState() {
     super.initState();
-    _ticker = this.createTicker((elapsed) {
+    _ticker = createTicker((elapsed) {
       setState(() {
         _currentlyElapsed = elapsed;
       });
@@ -72,7 +71,7 @@ class _StopwatchState extends State<Stopwatch>
         body: Container(
           width: displayWidth(context),
           height: displayHeight(context),
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment(0.29498612880706787, -0.9634561538696289),
                 end: Alignment(0.9634561538696289, 1.3808166980743408),
@@ -97,7 +96,7 @@ class _StopwatchState extends State<Stopwatch>
                 bottom: displayHeight(context) * 0.254,
                 child: GestureDetector(
                   onTap: _reset,
-                  child: ResetButton(),
+                  child: const ResetButton(),
                 ),
               ),
               Positioned(

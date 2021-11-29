@@ -22,15 +22,15 @@ class StartButton extends StatelessWidget {
           style: GoogleFonts.rubik(
             fontWeight: FontWeight.bold,
             fontSize: displayWidth(context) * 0.0510,
-            color: isRunning ? Colors.white : Color(0xff33365B),
+            color: isRunning ? Colors.white : const Color(0xff33365B),
           ),
         ),
       ),
       decoration: BoxDecoration(
-        color: isRunning ? Colors.red : Color(0xfff1ff3c),
+        color: isRunning ? Colors.red : const Color(0xfff1ff3c),
         borderRadius: BorderRadius.circular(25),
         boxShadow: [
-          BoxShadow(
+          const BoxShadow(
             color: Color(0xff484477),
             blurRadius: 50,
             offset: Offset(20, 20),

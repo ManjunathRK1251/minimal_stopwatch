@@ -17,7 +17,7 @@ class ResetButton extends StatelessWidget {
           style: GoogleFonts.rubik(
             fontWeight: FontWeight.bold,
             fontSize: displayWidth(context) * 0.0510,
-            color: Color(0xff33365B),
+            color: const Color(0xff33365B),
           ),
         ),
       ),
@@ -26,7 +26,7 @@ class ResetButton extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         boxShadow: [
-          BoxShadow(
+          const BoxShadow(
             color: Color(0xff484477),
             blurRadius: 50,
             offset: Offset(20, 20),
